@@ -51,6 +51,7 @@ img.dibley {
 
     .box1 {
         background-color: #E50000;
+        color: white;
         grid-column-start: 1;
         grid-column-end: 4;
     }
@@ -72,11 +73,13 @@ img.dibley {
     }
     .box5 {
         background-color: #004CFF;
+        color: white;
         grid-column-start: 3;
         grid-row-start: 3;
     }
     .box6 {
         background-color: #770088;
+        color: white;
         grid-column-start: 1;
         grid-column-end: 4;
     }
