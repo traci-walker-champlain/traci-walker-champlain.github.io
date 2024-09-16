@@ -19,7 +19,7 @@ main.container-fluid {
     width: 50%;
 }
 
-p {
+p, li {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.6rem;
 }
