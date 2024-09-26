@@ -88,3 +88,6 @@ img.dibley {
     padding: 5px;
     justify-content: center;
   }
+.carousel-caption {
+    background-color: rgba(0, 0, 0, .25);
+}
