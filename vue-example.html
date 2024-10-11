@@ -4,8 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="A example page that demonstrates the Vue framework data bindings for creating a table.">
+    <meta name="author" content="Traci Walker">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>Vue Example: Traci Walker</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
     <!-- Bootstrap core CSS -->
@@ -19,13 +20,13 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="#">Traci Walker</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar"
+            aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
@@ -37,8 +38,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">About</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="vue-example.html">Vue Example</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="angular-example.html">Angular Example</a>
                 </li>
             </ul>
         </div>
@@ -54,13 +58,15 @@
                     <th>Name</th>
                     <th>Breed</th>
                     <th>Age</th>
+                    <th>Nickname</th>
                 </thead>
                 <tbody>
                     <tr v-for="dog in dogs">
-                        <td><img :src="dog.image" /></td>
+                        <td><img :src="dog.image" :alt="'Photo of '+dog.name"/></td>
                         <td>{{dog.name}}</td>
                         <td>{{dog.breed}}</td>
                         <td>{{dog.age}}</td>
+                        <td>{{dog.nickname}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -72,8 +78,8 @@
                     return {
                         name: 'Traci Walker',
                         dogs: [
-                            { name: "Willow", image: "./images/willow.webp", breed: "Pug/Boston Terrier/Chihuahua", age: 12 },
-                            { name: "Dexter", image: "./images/dexter.webp", breed: "Parsons Russel Terrier", age: 8 }
+                            { name: "Willow", image: "./images/willow.webp", breed: "Pug/Boston Terrier/Chihuahua", age: 12, nickname: "Tater tot" },
+                            { name: "Dexter", image: "./images/dexter.webp", breed: "Parsons Russel Terrier", age: 8, nickname: "Snap dragon" }
                         ]
                     }
                 }
